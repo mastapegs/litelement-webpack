@@ -8,10 +8,10 @@ class TopBar extends LitElement {
   
   render() {
     return html`
-      <p>top-bar</p>
+      <p class='text-center'>top-bar</p>
     `
   }
-  
+
 }
 
 customElements.define('top-bar', TopBar)
