@@ -10,7 +10,9 @@ class App extends LitElement {
   render() {
     return html`
       <top-bar></top-bar>
-      <page-router></page-router>
+      <div class='container mx-auto my-8 p-6 bg-white rounded-lg shadow-lg'>
+        <page-router></page-router>
+      </div>
     `
   }
 }
