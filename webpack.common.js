@@ -26,11 +26,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    // new HtmlWebpackPlugin({
-    //   title: 'LitElement',
-    //   template: './src/index.html',
-    //   filename: 'index.html'
-    // }),
     ...pages.map(page => new HtmlWebpackPlugin({
       ...page
     })),
