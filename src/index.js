@@ -11,7 +11,7 @@ class App extends LitElement {
   render() {
     return html`
       <top-bar></top-bar>
-      <h1>LitElement Web App</h1>
+      <h1 class='shadow w-1/2 mx-auto px-10 py-4 mt-3 bg-white'>LitElement Web App</h1>
     `
   }
 
