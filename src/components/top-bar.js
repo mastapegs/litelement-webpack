@@ -35,7 +35,7 @@ class TopBar extends LitElement {
     <nav class='w-full h-16 bg-blue-700 text-white'>
       <ul class='flex h-full justify-evenly items-center'>
         ${this.navList.map(({ path, text }) => html`
-        <li class='border  bg-blue-900 rounded shadow-md p-2'>
+        <li class='border bg-blue-900 rounded shadow-md p-2'>
           <a href=${path}>${text}</a>
         </li>
         `)}
