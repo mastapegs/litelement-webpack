@@ -2,17 +2,38 @@ const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const pages = [
+  {
+    title: 'LitElement',
+    template: './src/index.html',
+    filename: 'index.html',
+  },
+  {
+    title: 'About | LitElement',
+    template: './src/index.html',
+    filename: 'about/index.html',
+  },
+  {
+    title: 'Contact | LitElement',
+    template: './src/index.html',
+    filename: 'contact/index.html',
+  },
+]
+
 module.exports = {
   entry: {
     app: './src/index.js',
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'LitElement',
-      template: './src/index.html',
-      filename: 'index.html'
-    }),
+    // new HtmlWebpackPlugin({
+    //   title: 'LitElement',
+    //   template: './src/index.html',
+    //   filename: 'index.html'
+    // }),
+    ...pages.map(page => new HtmlWebpackPlugin({
+      ...page
+    })),
   ],
   output: {
     filename: '[name].bundle.js',
