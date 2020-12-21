@@ -6,16 +6,17 @@ class HomePage extends LitElement {
   }
   firstUpdated() {
     const title = document.getElementsByTagName('title')[0]
-    title.innerText= 'Home | LitElement'
+    title.innerText = 'Home | LitElement'
   }
   render() {
-    return html`
-    <div class='max-w-none prose prose-sm lg:prose-lg xl:prose-xl'>
+    const page = html`
       <h1>Styling an entire block of Vanilla HTML with Tailwind</h1>
       <p>Right off the bat, check out how cool this code block looks...</p>
       <pre><code>console.log('Hello, World!!!')</code></pre>
       <p>That is amazing!</p>
-    </div>
+    `
+    return html`
+      <prose-container .component="${page}"></prose-container>
     `
   }
 }

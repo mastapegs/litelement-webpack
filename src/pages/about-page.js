@@ -1,4 +1,5 @@
 import { LitElement, html } from 'lit-element'
+import '../components/prose-container'
 
 class About extends LitElement {
   createRenderRoot() {
@@ -6,14 +7,15 @@ class About extends LitElement {
   }
   firstUpdated() {
     const title = document.getElementsByTagName('title')[0]
-    title.innerText= 'About | LitElement'
+    title.innerText = 'About | LitElement'
   }
   render() {
+    const page = html`
+      <h1>About</h1>
+      <p>About Page Placeholder</p>
+    `
     return html`
-      <div class='max-w-none prose prose-sm lg:prose-lg xl:prose-xl'>
-        <h1>About</h1>
-        <p>About Page Placeholder</p>
-      </div>
+      <prose-container .component="${page}"></prose-container>
     `
   }
 }
