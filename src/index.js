@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit-element'
-import "tailwindcss/tailwind.css"
+import "./styles.css"
 import './components/top-bar'
 
 class App extends LitElement {
