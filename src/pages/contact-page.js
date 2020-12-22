@@ -1,14 +1,14 @@
-import { LitElement, html } from 'lit-element'
+import { html } from 'lit-element'
+import LitTailement from '../utils/LitTailement'
 import '../components/prose-container'
 
-class Contact extends LitElement {
-  createRenderRoot() {
-    return this
-  }
+class Contact extends LitTailement {
+
   firstUpdated() {
     const title = document.getElementsByTagName('title')[0]
     title.innerText = 'Contact | LitElement'
   }
+
   render() {
     const page = html`
       <h1>Contact</h1>
@@ -18,6 +18,7 @@ class Contact extends LitElement {
       <prose-container .component="${page}"></prose-container>
     `
   }
+  
 }
 
 customElements.define('contact-page', Contact)
