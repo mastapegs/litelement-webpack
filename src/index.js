@@ -1,5 +1,6 @@
 import { html } from 'lit-element'
 import LitTailement from './utils/LitTailement'
+import './tailwind.css'
 import './components/top-bar'
 import './components/page-router'
 
