@@ -1,12 +1,9 @@
-import { LitElement, html } from 'lit-element'
-import 'tailwindcss/tailwind.css'
+import { html } from 'lit-element'
+import LitTailement from './utils/LitTailement'
 import './components/top-bar'
 import './components/page-router'
 
-class App extends LitElement {
-  createRenderRoot() {
-    return this
-  }
+class App extends LitTailement {
   render() {
     return html`
       <top-bar></top-bar>
