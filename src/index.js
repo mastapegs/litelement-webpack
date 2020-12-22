@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit-element'
-import './tailwind.css'
+import 'tailwindcss/tailwind.css'
 import './components/top-bar'
 import './components/page-router'
 
