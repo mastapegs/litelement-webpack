@@ -1,15 +1,18 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement, html, css, unsafeCSS } from 'lit-element'
+import tailwind from '!!raw-loader!../tailwind.css'
+
+console.log(tailwind)
 
 class TopBar extends LitElement {
+
+  static get styles() {
+    return css`${unsafeCSS(tailwind)}`
+  }
 
   static get properties() {
     return {
       navList: { type: Array },
     }
-  }
-
-  createRenderRoot() {
-    return this
   }
 
   constructor() {
