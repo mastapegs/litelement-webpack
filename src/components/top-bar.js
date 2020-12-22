@@ -1,13 +1,7 @@
-import { LitElement, html, css, unsafeCSS } from 'lit-element'
-import tailwind from '!!raw-loader!../tailwind.css'
+import { html } from 'lit-element'
+import LitTailement from '../utils/LitTailement'
 
-console.log(tailwind)
-
-class TopBar extends LitElement {
-
-  static get styles() {
-    return css`${unsafeCSS(tailwind)}`
-  }
+class TopBar extends LitTailement {
 
   static get properties() {
     return {
