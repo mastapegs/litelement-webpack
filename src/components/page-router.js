@@ -6,12 +6,8 @@ import '../pages/contact-page'
 
 class PageRouter extends LitElement {
 
-  createRenderRoot() {
-    return this
-  }
-
   firstUpdated() {
-    const outlet = document.getElementById('router-outlet')
+    const outlet = this.shadowRoot.getElementById('router-outlet')
     const router = new Router(outlet)
     router.setRoutes([
       { path: '/', component: 'home-page' },
